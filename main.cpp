@@ -17,6 +17,7 @@ int main() {
     string encrypted_message;
     cout << "Encrypting..." << endl;
 
+    //loops through secret_message and replaces the charcters in encrypted_message
     for (char c: secret_message) {
         size_t pos = alphabet.find(c);
             if (pos != string::npos) {
@@ -45,6 +46,9 @@ int main() {
             getline(cin, encrypted_input);
             cout << endl;
 
+            cout << "Decrypting..." << endl;
+
+            //loops through encrypted_input and replaces the characters to make the decrypted_message
             for (char c: encrypted_input) {
                 size_t pos = key.find(c);
                 if (pos != string::npos) {
@@ -55,7 +59,6 @@ int main() {
                 }
             }
 
-            cout << "Decrypting..." << endl;
             cout << "Your decrypted message is: " + decrypted_message << endl;
             break;
         case 'n':
