@@ -39,9 +39,10 @@ int main() {
     switch (choice) {
         case 'y':
         case 'Y':
+            cin.clear();
+            cin.sync();
             cout << "Enter your encrypted message: ";
             getline(cin, encrypted_input);
-            cin >> encrypted_input;
             cout << endl;
 
             for (char c: encrypted_input) {
